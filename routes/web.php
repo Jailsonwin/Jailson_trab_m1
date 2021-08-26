@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('prod','ProdutoController');
+Route::resource('produtos','ProdutoController');

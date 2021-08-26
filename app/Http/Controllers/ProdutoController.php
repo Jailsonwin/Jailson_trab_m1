@@ -41,14 +41,19 @@ class ProdutoController extends Controller
     {
         // Criando as regras para validação
         $validateData = $request->validate([
-            'tipo'           =>      'required|max50',
-            'modelo'         =>      'required|max50',
-            'marca'          =>      'required|max50',
-            'precoVenda'     =>      'required|max50',
-            'cor'            =>      'required|max50',
-            'peso'           =>      'required|max50',
-            'descricao'      =>      'required|max200'
+            'tipo'           =>      'required|max:50',
+            'modelo'         =>      'required|max:50',
+            'marca'          =>      'required|max:50',
+            'precoVenda'     =>      'required|max:50',
+            'cor'            =>      'required|max:50',
+            'peso'           =>      'required|max:50',
+            'descricao'      =>      'required|max:200'
         ]);
+                // executando o método para a gravação do registro
+                $paciente = Produto::create($validateData);
+                // redirecionando para a tela principal do módulo
+                // de pacientes
+                return redirect('/produtos')->with('success','Dados adicionados com sucesso!');
     }
 
     /**
@@ -64,7 +69,7 @@ class ProdutoController extends Controller
         $produto = Produto::findOrFail($id);
         // retornando a tela de visualização com o
         // objeto recuperado
-        return view('produto.show',compact('produto'));
+        return view('produtos.show',compact('produto'));
     }
 
     /**
@@ -80,7 +85,7 @@ class ProdutoController extends Controller
         $produto = Produto::findOrFail($id);
         // retornando a tela de visualização com o
         // objeto recuperado
-        return view('produto.edit',compact('produto'));
+        return view('produtos.edit',compact('produto'));
     }
 
     /**
@@ -95,19 +100,19 @@ class ProdutoController extends Controller
          // criando um objeto para testar/aplicar 
         // validações nos dados da requisição
         $validateData = $request->validate([
-            'tipo'           =>      'required|max50',
-            'modelo'         =>      'required|max50',
-            'marca'          =>      'required|max50',
-            'precoVenda'     =>      'required|max50',
-            'cor'            =>      'required|max50',
-            'peso'           =>      'required|max50',
-            'descricao'      =>      'required|max200'
+            'tipo'           =>      'required|max:50',
+            'modelo'         =>      'required|max:50',
+            'marca'          =>      'required|max:50',
+            'precoVenda'     =>      'required|max:50',
+            'cor'            =>      'required|max:50',
+            'peso'           =>      'required|max:50',
+            'descricao'      =>      'required|max:200'
         ]);
         // criando um objeto para receber o resultado
         // da persistência (atualização) dos dados validados 
         Produto::whereId($id)->update($validateData);
         // redirecionando para o diretório raiz (index)
-        return redirect('/pacientes')->with('success', 
+        return redirect('/produtos')->with('success', 
         'Dados atualizados com sucesso!');
     }
 
@@ -124,7 +129,7 @@ class ProdutoController extends Controller
             // realizando a exclusão
             $produto->delete();
             // redirecionando para o diretório raiz (index)
-            return redirect('/produto')->with('success', 
+            return redirect('/produtos')->with('success', 
             'Dados removidos com sucesso!');
     }
 }

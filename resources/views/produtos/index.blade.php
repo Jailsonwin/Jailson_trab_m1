@@ -16,7 +16,7 @@
                 <div class="card-header">
                     <div class="d-flex justify-content-between w-100">
                         <span>@lang('Listagem Produtos')</span>
-                        <a href="{{ url('prod/create') }}" class="btn-primary btn-sm">
+                        <a href="{{ url('produtos/create') }}" class="btn-primary btn-sm">
                             <i class="fa fa-plus"></i> @lang('Novo Produto')
                         </a>
                     </div>
