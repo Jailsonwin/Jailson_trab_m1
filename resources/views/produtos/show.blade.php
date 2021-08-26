@@ -1,6 +1,6 @@
 @extends('produtos.layout')
 
-@section('title',__($produto->nome . ':Visualizando'))
+@section('title',__('Visualizando: ' . $produto->tipo))
 
 @push('css')
 <style>
@@ -23,7 +23,7 @@ table th{
             <div class="card">
                 <div class="card-header">
                     <div class="d-flex justify-content-between w-100">
-                        <span><span class="text-info">{{$produto->nome}}</span>: (@lang('CRUD Laravel'))</span>
+                        <span><span class="text-info">{{$produto->tipo}}</span>@lang(' - Informaçoes do produto')</span>
                         <a href="{{ url('produtos') }}" class="btn-info btn-sm">
                             <i class="fa fa-arrow-left"></i> @lang('Voltar')
                         </a>
@@ -37,7 +37,7 @@ table th{
                     @endif
 
 
-                    <table class="w3-table-all notranslate" width="100%" border="1">
+                    <table class="notranslate table table-striped"  width="100%" border="1">
                         <tbody>
                         <tr>
                           <th align="left"><strong>ID:</strong></th>
