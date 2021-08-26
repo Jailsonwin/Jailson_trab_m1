@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Produto;
 
 class ProdutoController extends Controller
 {
@@ -16,7 +17,7 @@ class ProdutoController extends Controller
         //Obtendo os dados de todos os pacientes
         $produtos = Produto::all();
         //Chamando a tela e enviando o objeto $pacientes como parametro
-        return view('produto.index', compact('produtos'));
+        return view('produtos.index', compact('produtos'));
     }
 
     /**
