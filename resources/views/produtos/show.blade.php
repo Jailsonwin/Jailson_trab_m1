@@ -23,7 +23,7 @@ table th{
             <div class="card">
                 <div class="card-header">
                     <div class="d-flex justify-content-between w-100">
-                        <span><span class="text-info">{{$produto->tipo}}</span>@lang(' - Informaçoes do produto')</span>
+                        <span class="text-info">Infomações do Item: {{$produto->tipo}}</span>
                         <a href="{{ url('produtos') }}" class="btn-info btn-sm">
                             <i class="fa fa-arrow-left"></i> @lang('Voltar')
                         </a>
