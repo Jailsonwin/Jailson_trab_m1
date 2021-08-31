@@ -45,7 +45,11 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
+<<<<<<< HEAD
                 <i class="fas fa-home"></i> Home<!--{{ config('app.name') }}-->
+=======
+                    Home<!--{{ config('app.name') }}-->
+>>>>>>> cb6ea79ec418d6b15442a96e555f94f049ced6e5
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
