@@ -46,7 +46,7 @@
                                 <td>{{$produto->tipo}}</td>
                                 <td>{{$produto->modelo}}</td>
                                 <td>{{$produto->marca}}</td>
-                                <td>{{$produto->precoVenda}}</td>
+                                <td>R$ {{$produto->precoVenda}}</td>
                                 <td class="text-center p-0 align-middle" width="70">
                                     <a href="{{ route('produtos.show', $produto->id)}}"
                                         class="btn btn-info btn-sm">@lang('Abrir')
