@@ -1,6 +1,6 @@
 @extends('produtos.layout')
 
-@section('title',__('Editar (CRUD Laravel)'))
+@section('title',__('Editando: ' . $produto->tipo))
 
 @push('css')
 <style>
