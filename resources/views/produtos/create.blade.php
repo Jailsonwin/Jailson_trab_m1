@@ -12,7 +12,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="card">
+            <div class="card shadow-lg mb-5 bg-black rounded">
                 <div class="card-header">
                     <div class="d-flex justify-content-between w-100">
                         <span>@lang('Cadastro de Novo Produto')</span>

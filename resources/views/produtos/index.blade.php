@@ -12,12 +12,12 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="card">
+            <div class="card shadow-lg mb-5 bg-black rounded">
                 <div class="card-header">
                     <div class="d-flex justify-content-between w-100">
-                        <span>@lang('Listagem Produtos')</span>
+                        <span>@lang('Listagem de Produtos')</span>
                         <a href="{{ url('produtos/create') }}" class="btn-primary btn-sm">
-                            <i class="fa fa-plus"></i> @lang('Novo Produto')
+                            <i class="fas fa-plus-circle"></i> @lang(' Novo Produto')
                         </a>
                     </div>
                 </div>

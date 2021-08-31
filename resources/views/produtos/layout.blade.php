@@ -14,6 +14,8 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -30,8 +32,10 @@
         body {
             font-family: "Nunito", sans-serif;
             font-size: 0.9rem;
+            background-image: url("https://i.pinimg.com/originals/37/9c/cb/379ccba5a68397e5366956db60585819.png");
             background-color: lightgray;
         }
+
     </style>
     @stack('css')
 </head>
@@ -41,7 +45,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name') }}
+                <i class="fas fa-home"></i> Home<!--{{ config('app.name') }}-->
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -96,7 +100,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4"> 
             @yield('content')
         </main>
     </div>
@@ -106,6 +110,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     @stack('js')
+
 </body>
 
 </html>     
