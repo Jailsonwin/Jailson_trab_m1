@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
+        <link rel="icon" 
+         type="image/jpg"
+        href=" https://img-premium.flaticon.com/png/512/2169/premium/2169939.png?token=exp=1630450753~hmac=f0f702174466127fad546322c10eb2a9 "/>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
